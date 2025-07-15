@@ -15,28 +15,24 @@ declare global {
   }
 }
 
+function shouldLog(): boolean {
+  return typeof process === 'undefined' || !process.env.VITEST;
+}
+
 console.llog = (...args: Parameters<typeof console.log>) => {
-  if (typeof process === 'undefined' || !process.env.VITEST) {
-    console.log(...args);
-  }
+  if (shouldLog()) console.log(...args);
 };
 
 console.ldebug = (...args: Parameters<typeof console.debug>) => {
-  if (typeof process === 'undefined' || !process.env.VITEST) {
-    console.debug(...args);
-  }
+  if (shouldLog()) console.debug(...args);
 };
 
 console.lwarn = (...args: Parameters<typeof console.warn>) => {
-  if (typeof process === 'undefined' || !process.env.VITEST) {
-    console.warn(...args);
-  }
+  if (shouldLog()) console.warn(...args);
 };
 
 console.lerror = (...args: Parameters<typeof console.error>) => {
-  if (typeof process === 'undefined' || !process.env.VITEST) {
-    console.error(...args);
-  }
+  if (shouldLog()) console.error(...args);
 };
 
 // Make this a module
