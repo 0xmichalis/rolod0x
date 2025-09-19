@@ -57,9 +57,11 @@ possible.
 
 ### Development Workflow
 
-- Use pnpm for package management
+- Use `pnpm` for package management
+- **IMPORTANT**: NEVER EVER use `npx` without permission!
 - Use `pnpm vitest run $FILE_TO_TEST` to run tests
 - Run `pnpm build` to ensure that the code compiles correctly
+- Run `pnpm link --global` to install CLI scripts globally
 
 ### Code Quality
 
