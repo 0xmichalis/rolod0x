@@ -95,7 +95,12 @@ possible.
 
 ### Testing best practices
 
-- **IMPORTANT: NEVER EVER** copy code to be tested from the source files
+**IMPORTANT**: These are all non-negotiable best practices!
+
+- **Test runs must be 100% clean** with no stderr output. Always
+  mock console.error, console.warn, or any logging that would appear in test
+  output, and verify the expected messages in assertions instead.
+- **NEVER EVER** copy code to be tested from the source files
   into the test files!!  The test suite should ONLY ever test code which
   exists in the main implementation source files.
 - Write tests for new features and ensure they pass
