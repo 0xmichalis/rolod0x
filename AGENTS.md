@@ -95,6 +95,9 @@ possible.
 
 ### Testing best practices
 
+- **IMPORTANT: NEVER EVER** copy code to be tested from the source files
+  into the test files!!  The test suite should ONLY ever test code which
+  exists in the main implementation source files.
 - Write tests for new features and ensure they pass
 - Use React Testing Library for component tests
 - Test behavior, not implementation
