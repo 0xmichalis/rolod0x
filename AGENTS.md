@@ -61,6 +61,7 @@ possible.
 - **IMPORTANT**: NEVER EVER use `npx` without permission!
 - Use `pnpm vitest run $FILE_TO_TEST` to run tests
 - Run `pnpm build` to ensure that the code compiles correctly
+- Run `pnpm rolod0x` to test the CLI
 - Run `pnpm link --global` to install CLI scripts globally
 
 ### Code Quality
