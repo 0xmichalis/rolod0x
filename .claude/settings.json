@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm rolod0x:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm lint:fix:*)",
+      "Bash(pnpm prettier:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm vitest run:*)"
+    ],
+    "deny": [
+      "Bash(npx:*)"
+    ]
+  }
+}

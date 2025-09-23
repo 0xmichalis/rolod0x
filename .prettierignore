@@ -2,6 +2,7 @@ dist
 distribution
 demo-video/
 node_modules
+.claude/settings.local.json
 .gitignore
 .github
 .eslintignore
