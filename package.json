@@ -8,7 +8,7 @@
     "url": "https://github.com/rolod0x/rolod0x.git"
   },
   "bin": {
-    "rolod0x": "./src/cli.ts"
+    "rolod0x": "./bin/rolod0x.sh"
   },
   "scripts": {
     "build": "tsc --noEmit && pnpm build:vite",
