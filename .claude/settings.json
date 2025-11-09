@@ -8,8 +8,6 @@
       "Bash(pnpm build:*)",
       "Bash(pnpm vitest run:*)"
     ],
-    "deny": [
-      "Bash(npx:*)"
-    ]
+    "deny": ["Bash(npm:*)", "Bash(npx:*)"]
   }
 }
