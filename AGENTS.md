@@ -60,11 +60,15 @@ possible.
 - Use `pnpm` for package management
 - **IMPORTANT**: NEVER EVER use `npx` without permission!
 - Use `pnpm vitest run $FILE_TO_TEST` to run tests
+- Use `pnpm lint` to run eslint and prettier in parallel
+- Use `pnpm lint:fix` to ask eslint and prettier to auto-fix issues
 - Run `pnpm build` to ensure that the code compiles correctly
+- Run `pnpm rolod0x` to test the CLI
 - Run `pnpm link --global` to install CLI scripts globally
 
 ### Code Quality
 
+- Honour settings in `.editorconfig`
 - ESLint for code linting
 - Prettier for code formatting
 - Commitlint for conventional commit messages, with appropriate commit types:
@@ -87,6 +91,10 @@ possible.
 ### General best practices
 
 - Avoid code duplication as much as possible
+- Keep code files under 300 lines
+- One class per file
+- .ts files should use kebab-case.ts not camelCase.ts or another style
+- .tsx files should use CamelCase.tsx, except for `index.tsx`
 - Follow TypeScript best practices
 - Use proper type annotations
 - Document complex logic
@@ -94,6 +102,14 @@ possible.
 
 ### Testing best practices
 
+**IMPORTANT**: These are all non-negotiable best practices!
+
+- **Test runs must be 100% clean** with no stderr output. Always
+  mock console.error, console.warn, or any logging that would appear in test
+  output, and verify the expected messages in assertions instead.
+- **NEVER EVER** copy code to be tested from the source files
+  into the test files!!  The test suite should ONLY ever test code which
+  exists in the main implementation source files.
 - Write tests for new features and ensure they pass
 - Use React Testing Library for component tests
 - Test behavior, not implementation
