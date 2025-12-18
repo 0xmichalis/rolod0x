@@ -1,9 +1,8 @@
 // EVM regexps
-export const RE_EVM_ADDRESS = /0x[0-9a-f]{40}\b/i;
-export const RE_EVM_BYTES32 = /\b(0x)?[0-9a-f]{64}\b/i;
+export const RE_EVM_ADDRESS = /0x[0-9a-fA-F]{40}\b/;
+export const RE_EVM_BYTES32 = /\b(0x)?[0-9a-fA-F]{64}\b/;
 export const RE_EVM_ADDRESS_OR_BYTES32 = new RegExp(
   `(${RE_EVM_ADDRESS.source}|${RE_EVM_BYTES32.source})`,
-  'i',
 );
 
 // Solana regexps
