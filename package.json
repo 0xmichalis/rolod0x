@@ -127,7 +127,7 @@
     "typescript": "^5.7.2",
     "vite": "^5.4.11",
     "vite-plugin-checker": "^0.8.0",
-    "vitest": "^2.1.8",
+    "vitest": "^4.1.0",
     "vitest-chrome": "github:aspiers/vitest-chrome#fix-esm",
     "web-ext": "^8.3.0",
     "ws": "^8.18.0"
