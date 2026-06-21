@@ -130,7 +130,7 @@
     "vitest": "^2.1.8",
     "vitest-chrome": "github:aspiers/vitest-chrome#fix-esm",
     "web-ext": "^8.3.0",
-    "ws": "^8.18.0"
+    "ws": "^8.21.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
